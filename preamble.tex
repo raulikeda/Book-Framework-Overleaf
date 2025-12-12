@@ -1,0 +1,66 @@
+% Geometry / layout
+\usepackage[paperwidth=17.0cm,paperheight=24.0cm]{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=1.5cm,lmargin=2.0cm,rmargin=1.5cm,footskip=0.9cm}
+
+\linespread{1.1}
+\parskip=.3cm
+
+% Language / encoding
+\usepackage[portuguese]{babel}
+% \usepackage[latin1]{inputenc} % (Overleaf often prefers utf8; see note below)
+\usepackage[utf8]{inputenc} % (Overleaf often prefers utf8; see note below)
+
+% Graphics
+\usepackage{graphicx}
+\DeclareGraphicsRule{.wmf}{bmp}{}{} % declare wmf extension
+
+% Links / TOC / titles
+\usepackage{hyperref}
+\usepackage[titletoc]{appendix}  % título apêndice na toc
+\usepackage{titlesec,titletoc}   % título apêndice na toc
+\usepackage{titlesec}            % alinhamento do título
+
+\usepackage[lofdepth,lotdepth]{subfig}
+\usepackage{epsfig}
+\usepackage[fleqn]{cases}
+\usepackage{caption}
+\usepackage[justification=centering]{caption}
+\usepackage{multicol}
+\usepackage{float}
+
+% TOC name + dotted lines
+\addtocontents{toc}{\protect\thispagestyle{empty}} % tirar o número da 1a página do conteúdo
+\renewcommand{\contentsname}{CONTEÚDO}
+
+\makeatletter
+\renewcommand{\l@section}{\@dottedtocline{1}{1.5em}{2.6em}}
+\renewcommand{\l@subsection}{\@dottedtocline{2}{4.1em}{4em}}
+\renewcommand{\l@subsubsection}{\@dottedtocline{3}{7.7em}{1.0em}}
+\makeatother
+
+% Chapter title formatting
+\newcommand*{\justifyheading}{\raggedleft}
+
+\titleformat{\chapter}[display]
+{\normalfont \huge\bfseries\justifyheading}
+{\huge \MakeUppercase{\chaptertitlename}\ \thechapter}{15pt}
+{\huge \MakeUppercase}
+
+% Fancy headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancyhead{} % clear all header fields
+\fancyhead[RE]{{\it Título do Livro}}
+\fancyhead[RO,LE]{\thepage}
+\fancyfoot{}
+
+% Table dashed lines
+\usepackage{arydshln}
+\setlength\dashlinedash{0.2pt}
+\setlength\dashlinegap{3pt}
+\setlength\arrayrulewidth{0.3pt}
+
+% Title metadata (used by \maketitle in frontmatter/title.tex)
+\title{{\bf\huge TÍTULO \\ \medskip DO LIVRO}}
+\date{}

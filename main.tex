@@ -1,0 +1,39 @@
+\documentclass[11pt, openright, a4paper]{book}
+
+\input{preamble}
+
+\begin{document}
+
+% ---------- Front matter ----------
+\frontmatter
+\pagenumbering{roman}
+
+\input{frontmatter/title}
+\input{frontmatter/copyright}
+\input{frontmatter/dedication}
+\input{frontmatter/epigraph}
+\input{frontmatter/preface}
+\input{frontmatter/acknowledgments}
+
+\cleardoublepage
+\tableofcontents
+\cleardoublepage
+\listoffigures
+\cleardoublepage
+\listoftables
+\cleardoublepage
+
+% ---------- Main matter ----------
+\mainmatter
+
+\input{chapters/ch0.1}
+\input{chapters/ch1.0}
+
+% ---------- Back matter ----------
+\backmatter
+
+\input{backmatter/appendices}
+\input{backmatter/bibliography}
+\input{backmatter/colophon}
+
+\end{document}
